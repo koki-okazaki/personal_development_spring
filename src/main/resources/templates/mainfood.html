@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Protein Search</title>
+</head>
+<body>
+    <h1>Food Protein Search</h1>
+<!--    <form action="/protein" method="get">-->
+<!--        <label for="foodName">:</label>-->
+<!--        <input type="text" id="foodName" name="foodName" required>-->
+<!--        <button type="submit">Search</button>-->
+
+	<div class="search1">
+		<input type="text" class="form-search" placeholder="検索キーワードを入力してください" name="keyword">
+	</div>
+
+
+	<form action="#" th:action="@{/submit}" th:object="${formData}" method="post">
+	    <label for="name">Name:</label>
+	    <input type="text" id="name" th:field="*{name}" />
+	
+	    <button type="submit">Submit</button>
+    </form>
+    <div id="result">
+        <!-- 結果がここに表示されます -->
+    </div>
+</body>
+</html>

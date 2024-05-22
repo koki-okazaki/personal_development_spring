@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html<html lang="ja" xmlns:th="https://www.thmeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1	th:each="item: ${foodlist}" th:object="${item}"></h1>
+	<p th:each="*{foodname}"></p>
+	<p　th:text="*{nutrientId}"></p>
+	<p th:text="*{nutrientName}"></p>
+	<p th:text="*{value}"></p>
+
+</body>
+</html>
